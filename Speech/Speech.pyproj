@@ -1,0 +1,92 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d49ac458-ffe7-4064-b83e-3518ed19c6e1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>test_microphone.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Speech</Name>
+    <RootNamespace>Speech</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="test_microphone.py" />
+    <Compile Include="python\setup.py" />
+    <Compile Include="python\test\transcribe_scp.py" />
+    <Compile Include="python\vosk\transcriber\cli.py" />
+    <Compile Include="python\vosk\transcriber\transcriber.py" />
+    <Compile Include="python\vosk\transcriber\__init__.py" />
+    <Compile Include="python\vosk\__init__.py" />
+    <Compile Include="python\vosk_builder.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="python\" />
+    <Folder Include="python\example\" />
+    <Folder Include="python\example\colab\" />
+    <Folder Include="python\test\" />
+    <Folder Include="python\vosk\" />
+    <Folder Include="python\vosk\transcriber\" />
+    <Folder Include="vosk-model-ja-0.22\" />
+    <Folder Include="vosk-model-ja-0.22\am\" />
+    <Folder Include="vosk-model-ja-0.22\conf\" />
+    <Folder Include="vosk-model-ja-0.22\graph\" />
+    <Folder Include="vosk-model-ja-0.22\graph\phones\" />
+    <Folder Include="vosk-model-ja-0.22\ivector\" />
+    <Folder Include="vosk-model-ja-0.22\rescore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="python\.pylintrc" />
+    <Content Include="python\example\colab\kaldi-build.ipynb" />
+    <Content Include="python\example\colab\vosk-adaptation.ipynb" />
+    <Content Include="python\example\colab\vosk-training.ipynb" />
+    <Content Include="python\example\colab\vosk.ipynb" />
+    <Content Include="python\README.md" />
+    <Content Include="vosk-model-ja-0.22\am\final.mdl" />
+    <Content Include="vosk-model-ja-0.22\conf\mfcc.conf" />
+    <Content Include="vosk-model-ja-0.22\conf\model.conf" />
+    <Content Include="vosk-model-ja-0.22\graph\disambig_tid.int" />
+    <Content Include="vosk-model-ja-0.22\graph\HCLG.fst" />
+    <Content Include="vosk-model-ja-0.22\graph\num_pdfs" />
+    <Content Include="vosk-model-ja-0.22\graph\phones.txt" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\align_lexicon.int" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\align_lexicon.txt" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\disambig.int" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\disambig.txt" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\optional_silence.csl" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\optional_silence.int" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\optional_silence.txt" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\silence.csl" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\word_boundary.int" />
+    <Content Include="vosk-model-ja-0.22\graph\phones\word_boundary.txt" />
+    <Content Include="vosk-model-ja-0.22\graph\words.txt" />
+    <Content Include="vosk-model-ja-0.22\ivector\final.dubm" />
+    <Content Include="vosk-model-ja-0.22\ivector\final.ie" />
+    <Content Include="vosk-model-ja-0.22\ivector\final.mat" />
+    <Content Include="vosk-model-ja-0.22\ivector\global_cmvn.stats" />
+    <Content Include="vosk-model-ja-0.22\ivector\online_cmvn.conf" />
+    <Content Include="vosk-model-ja-0.22\ivector\splice.conf" />
+    <Content Include="vosk-model-ja-0.22\README" />
+    <Content Include="vosk-model-ja-0.22\rescore\G.carpa" />
+    <Content Include="vosk-model-ja-0.22\rescore\G.fst" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
